@@ -8,7 +8,7 @@ A production-ready, highly secure RESTful backend service for a multi-user notes
 
 
 
-## 🛠️ Tech Stack & Architecture
+##  Tech Stack & Architecture
 
 *   **Framework:** FastAPI (Selected for high performance and native OpenAPI/Swagger generation)
 *   **Database ORM:** SQLAlchemy with an optimized SQLite backend
@@ -18,7 +18,7 @@ A production-ready, highly secure RESTful backend service for a multi-user notes
 
 
 
-## 💡 Key Features & Advanced Edge-Case Handling
+##  Key Features & Advanced Edge-Case Handling
 
 ### 1. Core Service Features
 *   **User Management:** Secure signup and credential verification returning short-lived JWT bearer access tokens.
@@ -33,7 +33,7 @@ A production-ready, highly secure RESTful backend service for a multi-user notes
 
 ---
 
-## 📋 API Endpoints Matrix
+##  API Endpoints 
 
 | Method | Endpoint | Description | Auth Required | Custom Status Codes Documented |
 | :--- | :--- | :--- | :---: | :--- |
@@ -88,7 +88,7 @@ docker build -t notes-backend .
 docker run -p 8080:8080 -e JWT_SECRET="your_test_secret_key" notes-backend
 ```
 
-###  🔒 Automated Grading & Testing Flow Notes
+###   Automated Grading & Testing Flow Notes
 *  **Header Authorization:** For locked endpoints, log in via POST /login, copy the string value inside access_token, and input it into the Swagger Authorize prompt at the top of the interface as a standard Bearer authorization context.
 
 *  **Multi-tenant Security:** Resource lookups apply 404 Not Found shielding on unauthorized entity IDs to prevent asset data mining, turning into 403 Forbidden exclusively on valid paths where permission is expressly denied.
