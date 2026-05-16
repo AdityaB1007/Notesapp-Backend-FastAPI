@@ -1,7 +1,8 @@
 import os
 import uuid
-import html  # Fix 3: For XSS Sanitation
+import html 
 from datetime import datetime
+from fastapi.responses import RedirectResponse
 from typing import List, Optional
 from fastapi import FastAPI, Depends, HTTPException, status, Query
 from fastapi.responses import JSONResponse
@@ -133,6 +134,10 @@ def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(securit
 app = FastAPI(title="Multi-User Notes API", version="1.1.0")
 
 #ENDPOINTS 
+
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse(url="/docs")
 
 @app.post("/register", status_code=status.HTTP_201_CREATED, responses={400: {"description": "Email already registered"}})
 def register(user_data: UserRegisterSchema, db: Session = Depends(get_db)):
