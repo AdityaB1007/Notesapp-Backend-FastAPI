@@ -1,4 +1,4 @@
-# 📝 Secure Multi-User Notes API
+# 🗒 Secure Multi-User Notes API
 
 A production-ready, highly secure RESTful backend service for a multi-user notes application (akin to Google Keep or Apple Notes). Built using **FastAPI**, **SQLAlchemy**, and **SQLite**, this service manages user authentication, full note lifecycles, and secure cross-user note sharing while strictly resolving deep concurrency and injection edge cases.
 
